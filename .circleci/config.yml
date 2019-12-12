@@ -51,9 +51,14 @@ commands:
     description: "Build"
     steps:
       - run:
-          name: "yarn build"
+          name: "npm build"
           command: node_modules/gulp/bin/gulp.js build-min
-
+  test:
+    description: "Test"
+    steps:
+      - run:
+          name: "npm test"
+          command: "npm test"
   docker:
     description: "Build and Push image to docker hub"
     steps:
@@ -85,6 +90,7 @@ jobs:
       - git_checkout_from_cache
       - npm_install
       - build
+      - test
       - docker
       - k8s_deploy
       
