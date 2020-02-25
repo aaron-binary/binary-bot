@@ -48,7 +48,7 @@
             var iframeWindow = document.getElementById('iframe-sync').contentWindow;
             iframeWindow.postMessage({ 
                 key: 'active_loginid',
-            });
+            }, '*');
         });
 
         function onClick() {
