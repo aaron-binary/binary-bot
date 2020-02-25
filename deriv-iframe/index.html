@@ -50,7 +50,15 @@
                 key: 'active_loginid',
             });
         });
+
+        function onClick() {
+            var iframeWindow = document.getElementById('iframe-sync').contentWindow;
+            iframeWindow.postMessage({ 
+                key: 'active_loginid',
+            });
+        }
     </script>
+    <a href="#" onclick="onClick()">CLICK FOR RICH QUICK SCHEME</a>
 	<div id="topbar">
     <div class="wrapper show-on-load">
 <div class="languages">
