@@ -6,9 +6,6 @@ import { TrackJSError } from '../../view/logger';
 export default Engine =>
     class Proposal extends Engine {
         makeProposals(tradeOption) {
-            if (!this.isNewTradeOption(tradeOption)) {
-                return;
-            }
             this.tradeOption = tradeOption;
             this.proposalTemplates = tradeOptionToProposal(tradeOption);
             this.renewProposalsOnPurchase();
@@ -138,23 +135,5 @@ export default Engine =>
                     this.startPromise.then(() => this.store.dispatch(proposalsReady()));
                 }
             }
-        }
-        isNewTradeOption(tradeOption) {
-            if (!this.tradeOption) {
-                this.tradeOption = tradeOption;
-                return true;
-            }
-
-            const isNotEqual = key => this.tradeOption[key] !== tradeOption[key];
-
-            return (
-                isNotEqual('duration') ||
-                isNotEqual('duration_unit') ||
-                isNotEqual('amount') ||
-                isNotEqual('prediction') ||
-                isNotEqual('barrierOffset') ||
-                isNotEqual('secondBarrierOffset') ||
-                isNotEqual('symbol')
-            );
         }
     };
