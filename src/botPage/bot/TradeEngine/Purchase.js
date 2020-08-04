@@ -29,7 +29,6 @@ export default Engine =>
 
                 this.subscribeToOpenContract(buy.contract_id);
                 this.store.dispatch(purchaseSuccessful());
-                this.renewProposalsOnPurchase();
 
                 delayIndex = 0;
 
