@@ -78,7 +78,7 @@
     "husky": "^2.3.0",
     "i18next-scanner": "^1.9.4",
     "immutable": "^3.8.2",
-    "jest": "^24.8.0",
+    "jest": "^26.6.3",
     "jquery": "^3.4.1",
     "jquery-ui": "1.12.1",
     "jquery-ui-css": "1.11.4",
