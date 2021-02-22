@@ -39,7 +39,7 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-env": "^7.12.17",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.4",
     "@binary-com/binary-indicators": "^1.6.0",
